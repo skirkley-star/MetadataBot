@@ -1,4 +1,4 @@
-openapi: 3.0.1
+openapi: 3.1.1
 info:
   title: Make.com Relay API
   version: 1.0.0
@@ -38,4 +38,5 @@ paths:
                     example: "success"
                   message:
                     type: string
+
                     example: "1 row(s) written to sheet successfully."
