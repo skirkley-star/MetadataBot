@@ -1,0 +1,41 @@
+openapi: 3.0.1
+info:
+  title: Make.com Relay API
+  version: 1.0.0
+servers:
+  - url: https://hook.us2.make.com/kj4ki5aeyyyfljq9b5wqcfgigk9wyrll
+paths:
+  /:
+    post:
+      summary: Push metadata rows into Google Sheets via Make.com
+      operationId: pushRows
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rows:
+                  type: array
+                  items:
+                    type: object
+                    example:
+                      Title: "Hello World"
+                      Package___Titles: "Test Package"
+                      Description: "Direct push through Make.com relay"
+                      Content___Formats: "Guide"
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "success"
+                  message:
+                    type: string
+                    example: "1 row(s) written to sheet successfully."

@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Make Relay",
+  "name_for_model": "makeRelay",
+  "description_for_human": "Push metadata rows into Google Sheets through Make.com webhook relay.",
+  "description_for_model": "Send metadata rows to Google Sheets by POSTing to a Make.com webhook relay.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://raw.githubusercontent.com/skirkley-star/MetadataBot/main/openapi.yaml"
+  },
+  "logo_url": "https://static.make.com/icons/favicon-32x32.png",
+  "contact_email": "you@example.com",
+  "legal_info_url": "https://make.com/legal"
+}
